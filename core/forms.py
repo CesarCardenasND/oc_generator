@@ -30,15 +30,7 @@ class regisUser(ModelForm):
 class conceptModelForm(ModelForm):
     class Meta:
         model = Concept
-        fields = ["id","unit", "quantity", "description", "unit_price", "total", "notes"]
-        labels = {
-            'unit': ('Unidad'),
-            'quantity': ('Cantidad'),
-            'description': ('Descripcion'),
-            'unit_price': ('Precio Unitario'),
-            'total': ('Total'),
-            'notes':('Notas'),
-        }
+        fields = ["id","Unidad", "Cantidad", "Descripcion", "Precio", "Total", "Notas"]
 
 class poModelForm(ModelForm):
     class Meta:

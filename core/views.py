@@ -81,6 +81,8 @@ def po_pdf(request):
         lines.append(item.contact_name)
         lines.append(item.bill_to)
         #lines.append(item.Concept.unit)
+        lines.append(" ")
+
     #line loop
     for line in lines:
         textob.textLine(line)
