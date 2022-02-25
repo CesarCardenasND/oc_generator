@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block title%}Home{%endblock%}
+{%block content%}
+<div class="container">
+    <ol class="breadcrumb my-4">
+      <li class="breadcrumb-item active">Registro OC</li>
+    </ol>
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>OC_gen</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <div>
+              <th>Conceptos</th>
+              {{formset}}
+            </div>
+
+            <div><input type="submit"></div>
+            
+            </form> </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+{%endblock%}

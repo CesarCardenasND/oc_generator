@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%block title%}Home{%endblock%}
+{%block content%}
+<div class="container">
+    <ol class="breadcrumb my-4">
+      <li class="breadcrumb-item active">Ordenes de Compra</li>
+    </ol>
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>Folio</th>
+          <th>Cliente</th>
+          <th>Obra</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for POS in PO %}
+          <tr>
+            <td>{{ POS.id }}</td>
+            <td>{{ POS.client }}</td>
+            <td>{{ POS.project }}</td>
+            <td></td>
+            <td style="width:50px;">
+              <div class = "row">
+                <div class = "col-sm-auto"><button type="button" onclick="alert('PDF PRESIONADO!')">PDF</button></div>
+                <div class = "col-sm-auto"><button type="button" onclick="alert('EDITAR PRESIONADO!')">EDITAR</button></div>
+                <div class= "col-sm-auto"><button type="button" onclick="alert('ELIMINAR PRESIONADO!')">ELIMINAR</button></div>
+              </div>
+            </td>
+        {% endfor %}
+          </tr>
+      </tbody>
+    </table>
+  </div>
+{%endblock%}
